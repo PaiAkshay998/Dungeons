@@ -134,7 +134,7 @@ function myMaze(){
 
 		this.spawnItems = function(){
 			// this is for gold
-			for(i=0;i<STATUS.getLevel()*10+1;i++){
+			for(i=0;i<STATUS.getLevel()*5+1;i++){
 				var gX = Math.floor(25+Math.random()*45);
 				var gY = Math.floor(10+Math.random()*25);
 

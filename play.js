@@ -17,7 +17,7 @@ var canShoot = true;
 var reloadTime = 0;
 var cameraMove = false;
 
-alert("Use the arrow keys to move !\n\nYou have two minutes to complete each level !\n\nEither flee or shoot your enemies with SpaceBar !\n\nReload takes 20 seconds. So shoot wisely  !\n\nThe ghosts have hollow body. So make sure you aim for the head !\n\nEat plenty of food to maintain your stamina ! \n\nAnd at the same time , try to loot as much as you can !")
+alert("Use the arrow keys to move !\n\nYou have one minute to complete each level !\n\nEither flee or shoot your enemies with SpaceBar !\n\nReload takes 15 seconds. So shoot wisely  !\n\nThe ghosts have hollow body. So make sure you aim for the head !\n\nEat plenty of food to maintain your stamina ! \n\nAnd at the same time , try to loot as much as you can !")
 
 // myHero images 
 DOWN = new Image(); DOWN.src = "icons/back.png";
@@ -121,7 +121,7 @@ var play = function(){
 
 	if(!canShoot){
 		reloadTime+=20;
-		if(reloadTime==10*1000){
+		if(reloadTime==15*1000){
 			reloadTime = 0;
 			canShoot = true;
 		}

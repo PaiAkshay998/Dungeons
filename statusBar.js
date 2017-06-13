@@ -3,7 +3,7 @@ function statusBar(){
 	this.hp = 50;
 	this.stamina = 50;
 	this.gold = 0;
-	this.time = 60*2;
+	this.time = 60;
 	this.hpColor = "#f00";
 
 	this.show = function(){
@@ -63,7 +63,7 @@ function statusBar(){
 	}
 
 	this.reduceStamina = function(){
-		this.stamina-=0.05;	
+		this.stamina-=0.1;	
 	}
 
 	this.itemPicked = function(item){

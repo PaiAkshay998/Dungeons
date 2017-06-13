@@ -39,6 +39,8 @@ function nextLevel(){
 	enemyList = [];
 	ctx.setTransform(1, 0, 0, 1, 0, 0);
 	ctx.scale(1.5,1.5);
+	STATUS.time = 60;
+	STATUS.stamina = 50;
 }
 
 

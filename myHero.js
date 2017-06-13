@@ -1,4 +1,4 @@
-	function myHero(){
+		function myHero(){
 	this.x=1;
 	this.y=0;
 	this.height = 30;
@@ -40,9 +40,29 @@
 			this.image = UP;
 		}
 
-		if(MAZE.getWorld()[this.x][this.y]==2 || MAZE.getWorld()[this.x][this.y]==3 || MAZE.getWorld()[this.x][this.y]==4){
-			STATUS.itemPicked(MAZE.getWorld()[this.x][this.y]);
+		var p00 = MAZE.getWorld()[this.x][this.y];
+		var p01 = MAZE.getWorld()[this.x][this.y+1];
+		var p10 = MAZE.getWorld()[this.x+1][this.y];
+		var p11 = MAZE.getWorld()[this.x+1][this.y+1];
+
+		if(p00==2 || p00==3 || p00==4){
+			STATUS.itemPicked(p00);
 			MAZE.world[this.x][this.y]=1;
+		}
+
+		else if(p01==2 || p01==3 || p01==4){
+			STATUS.itemPicked(p01);
+			MAZE.world[this.x][this.y+1]=1;
+		}
+
+		else  if(p10==2 || p10==3 || p10==4){
+			STATUS.itemPicked(p10);
+			MAZE.world[this.x+1][this.y]=1;
+		}
+
+		else if(p11==2 || p11==3 || p11==4){
+			STATUS.itemPicked(p11);
+			MAZE.world[this.x+1][this.y+1]=1;
 		}
 
 		else if(key==32){
